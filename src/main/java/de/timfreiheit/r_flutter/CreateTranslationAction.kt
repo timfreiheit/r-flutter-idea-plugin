@@ -56,7 +56,10 @@ class CreateTranslationAction : JPanel(), IntentionActionProvider {
                     null,
                     "Enter default value for key \"$newKey\":",
                     text,
-                    JOptionPane.PLAIN_MESSAGE)
+                    JOptionPane.PLAIN_MESSAGE
+            ) ?: // input was canceled
+                    return
+
             try {
                 val intlFile = getDefaultLocalizationFile(project) ?: return
                 print(intlFile.absolutePath)
