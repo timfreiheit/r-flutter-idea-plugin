@@ -28,6 +28,8 @@ intellij {
     version '2019.2.3'
     updateSinceUntilBuild = false
     downloadSources true
+
+    plugins "Dart:192.6459"
 }
 
 patchPluginXml {

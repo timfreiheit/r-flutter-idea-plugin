@@ -3,6 +3,8 @@
     <name>r_flutter</name>
     <vendor email="freiheit.tim@gmail.com" url="https://github.com/timfreiheit">Github</vendor>
 
+    <depends>Dart</depends>
+
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>

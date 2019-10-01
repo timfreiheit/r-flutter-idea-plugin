@@ -8,6 +8,8 @@ import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
+import com.intellij.psi.ResolveState
+import com.intellij.psi.scope.PsiScopeProcessor
 import com.intellij.psi.util.PsiTreeUtil
 import com.intellij.util.IncorrectOperationException
 
@@ -57,8 +59,7 @@ class CreateTranslationAction : JPanel(), IntentionActionProvider {
                     "Enter default value for key \"$newKey\":",
                     text,
                     JOptionPane.PLAIN_MESSAGE
-            ) ?: // input was canceled
-                    return
+            ) ?: return
 
             try {
                 val intlFile = getDefaultLocalizationFile(project) ?: return
