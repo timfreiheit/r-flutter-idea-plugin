@@ -1,0 +1,15 @@
+<idea-plugin>
+    <id>r_flutter</id>
+    <name>r_flutter</name>
+    <vendor email="freiheit.tim@gmail.com" url="https://github.com/timfreiheit">Github</vendor>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <application-components>
+        <component>
+            <implementation-class>de.timfreiheit.r_flutter.RFlutterComponent</implementation-class>
+        </component>
+    </application-components>
+</idea-plugin>
