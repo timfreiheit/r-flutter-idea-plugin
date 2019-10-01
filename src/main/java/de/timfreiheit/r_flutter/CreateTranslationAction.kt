@@ -61,6 +61,7 @@ class CreateTranslationAction : JPanel(), IntentionActionProvider {
                 val intlFile = getDefaultLocalizationFile(project) ?: return
                 print(intlFile.absolutePath)
                 addNewTranslation(intlFile, newKey, newValue)
+                Flutter(project).generate()
             } catch (e: Exception) {
                 JOptionPane.showMessageDialog(null, e.message)
             }
