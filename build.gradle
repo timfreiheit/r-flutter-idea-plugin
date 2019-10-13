@@ -29,7 +29,7 @@ intellij {
     updateSinceUntilBuild = false
     downloadSources true
 
-    plugins "Dart:192.6459"
+    plugins "Dart:192.6459", "io.flutter:38.1.4", "java"
 }
 
 patchPluginXml {

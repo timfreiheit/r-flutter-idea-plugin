@@ -3,15 +3,31 @@
     <name>r_flutter</name>
     <vendor email="freiheit.tim@gmail.com" url="https://github.com/timfreiheit">Github</vendor>
 
+    <depends>com.intellij.modules.json</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.all</depends>
+    <depends>com.intellij.modules.platform</depends>
     <depends>Dart</depends>
+    <depends>io.flutter</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>
 
-    <application-components>
+    <extensions defaultExtensionNs="com.intellij">
+        <intentionAction>
+            <className>de.timfreiheit.r_flutter.actions.ExtractStringResource</className>
+            <category>Flutter String Resources</category>
+        </intentionAction>
+        <inspectionToolProvider
+            implementation="de.timfreiheit.r_flutter.inspections.FlutterI18nInspectionProvider"/>
+    </extensions>
+
+    <project-components>
         <component>
-            <implementation-class>de.timfreiheit.r_flutter.RFlutterComponent</implementation-class>
+            <implementation-class>de.timfreiheit.r_flutter.actions.ExtractStringResource</implementation-class>
         </component>
-    </application-components>
+    </project-components>
+
 </idea-plugin>

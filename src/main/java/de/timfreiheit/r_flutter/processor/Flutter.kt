@@ -1,8 +1,9 @@
-package de.timfreiheit.r_flutter
+package de.timfreiheit.r_flutter.processor
 
 import com.intellij.openapi.project.Project
 import java.io.File
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 class Flutter(
         private val project: Project
@@ -49,5 +50,6 @@ class Flutter(
                 .redirectOutput(ProcessBuilder.Redirect.INHERIT)
                 .redirectError(ProcessBuilder.Redirect.INHERIT)
                 .start()
+                .waitFor(3, TimeUnit.SECONDS)
     }
 }

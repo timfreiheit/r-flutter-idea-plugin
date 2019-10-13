@@ -1,0 +1,1 @@
+Widget text = Text(I18n.of(context).title);
